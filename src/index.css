@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: whitesmoke;
+    
+}
+:root {
+    --primary-color: #202020;
+    --secondary-color: #00aaf4;
+    --ternary-color:#00d258;
+
+  }
+
+
+
+.header-border{
+    background-color: (90deg, #00aaf4 30%, #00d258 95%, #00d258 100%)
+}
+
+.responsive{
+    @apply md:w-[95%] lg:w-[90%] xl:w-[80%]
+}
+
+.flex-box{
+    @apply flex items-center justify-center flex-wrap
+}
+
+/* Custom thin scrollbar */
+.custom-scroll::-webkit-scrollbar {
+    width: 5px; /* Make scrollbar thinner */
+  }
+  
+  .custom-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light background */
+    border-radius: 10px;
+  }
+  
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #888; /* Scroll thumb color */
+    border-radius: 10px;
+  }
+  
+  .custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker on hover */
+  }
+  
