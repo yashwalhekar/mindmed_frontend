@@ -1,13 +1,20 @@
-// src/validation/contactValidation.js
-import * as Yup from 'yup';
+import * as Yup from "yup";
 
-const phoneRegExp = /^([0]?[6-9]{1})([0-9]{9})$/;
+export const contactValidationSchema = Yup.object({
+  name: Yup.string()
+    .matches(/^[a-zA-Z ]+$/, "Name must not contain special characters")
+    .required("Name is required"),
 
-export const contactValidationSchema = Yup.object().shape({
-  name: Yup.string().required('Name is required'),
-  email: Yup.string().email('Invalid email address').required('Email is required'),
+  email: Yup.string()
+    .matches(
+      /^[^@]+@gmail\.com$/,
+      "Invalid email format. Only Gmail addresses are allowed"
+    )
+    .required("Email is required"),
+
   phone: Yup.string()
-    .matches(phoneRegExp, 'Phone number is not valid')
-    .required('Phone number is required'),
-  message: Yup.string(),
+    .matches(/^\d{10}$/, "Phone number must be exactly 10 digits")
+    .required("Phone number is required"),
+
+  message: Yup.string().required("Message is required"),
 });

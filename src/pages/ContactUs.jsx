@@ -25,7 +25,7 @@ export default function ContactUs() {
           </section>
 
           {/* How to Reach Us Section */}
-          <section className="w-[90%] lg:w-[40%] bg-white rounded-bl-3xl rounded-tr-3xl shadow-lg ">
+          <section className="w-[95%] lg:w-[40%] bg-white rounded-bl-3xl rounded-tr-3xl shadow-lg ">
             <h3 className="text-3xl text-gray-500 font-semibold rounded-tr-3xl mb-4 p-5 bg-gradient-to-r from-orange-300  to-orange-100">
               {contactContent.howToReachUs.title}
             </h3>
@@ -33,16 +33,16 @@ export default function ContactUs() {
             {/* Email */}
 
             <div className="w-[100%] flex gap-5 justify-start items-center border-b-2 p-5">
-              <p className="text-4xl font-bold text-orange-400">
+              <p className="text-4xl font-bold text-orange-400 ">
                 <TiMail />
               </p>
               <div className="flex flex-col">
-                <p className="text-sm">
+                <p className="text-sm mr-5">
                   {contactContent.howToReachUs.email.description}{" "}
                 </p>
                 <a
                   href={`mailto:${contactContent.howToReachUs.email.address}`}
-                  className="text-blue-500 hover:underline"
+                  className="text-blue-500 hover:underline mr-5 text-sm"
                 >
                   {contactContent.howToReachUs.email.address}
                 </a>

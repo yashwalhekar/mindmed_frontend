@@ -5,7 +5,6 @@ import { contactValidationSchema } from "../../validations/contactFormValidation
 import Swal from 'sweetalert2';
 import { customerMsg } from "../../server/service";
 
-
 const ContactForm = () => {
   const formik = useFormik({
     initialValues: {
@@ -32,11 +31,20 @@ const ContactForm = () => {
         resetForm();
       } catch (error) {
         console.error("Error submitting form:", error);
-        Swal.fire({
-          title: "Error",
-          text: "Something went wrong. Please try again!",
-          icon: "error",
-        });
+        
+        if (error.response && error.response.status === 429) {
+          Swal.fire({
+            title: "Limit Exceeded!",
+            text: "Your response has been submitted successfully.",
+            icon: "warning",
+          });
+        } else {
+          Swal.fire({
+            title: "Error",
+            text: "Something went wrong. Please try again!",
+            icon: "error",
+          });
+        }
       }
     },
   });
@@ -65,7 +73,7 @@ const ContactForm = () => {
       />
       <InputField
         label="Phone"
-        type="text"
+        type="number"
         name="phone"
         placeholder="Your phone number"
         value={formik.values.phone}
