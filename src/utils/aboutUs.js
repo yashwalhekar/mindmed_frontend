@@ -1,9 +1,9 @@
-import ai_driven_img from "../assets/images/ai_driven.jpg";
+
 import Dr_Abhishek from "../assets/Dr_images/Dr_Abhishek.png";
 import Dr_Girija from "../assets/Dr_images/Dr_Girija.png";
 import Dr_Shweta from "../assets/Dr_images/Dr_Shweta.jpg";
 
-import Dr_Sneha from "../assets/Dr_images/Sneha.png";
+import Dr_Sneha from "../assets/Dr_images/sneha.png";
 import Vikrant from "../assets/Dr_images/Vikrant_Walhekar.png";
 import Chak from "../assets/Dr_images/CHAK.png";
 import Sandip from "../assets/Dr_images/sandip.png";
