@@ -1,9 +1,9 @@
-
+import ai_driven_img from "../assets/images/ai_driven.jpg";
 import Dr_Abhishek from "../assets/Dr_images/Dr_Abhishek.png";
 import Dr_Girija from "../assets/Dr_images/Dr_Girija.png";
 import Dr_Shweta from "../assets/Dr_images/Dr_Shweta.jpg";
 
-import Dr_Sneha from "../assets/Dr_images/sneha.png";
+import Dr_Sneha from "../assets/Dr_images/Sneha.png";
 import Vikrant from "../assets/Dr_images/Vikrant_Walhekar.png";
 import Chak from "../assets/Dr_images/CHAK.png";
 import Sandip from "../assets/Dr_images/sandip.png";
@@ -74,26 +74,14 @@ Leading MINDMED INNOVATIONS is a privilege, and I am committed to pushing bounda
       name: "Dr. Abhishek P. Raje",
       image: Dr_Abhishek,
       description: `As both Director and Chief Product Officer of MINDMED INNOVATIONS, I’m fortunate to be at the heart of a company that is redefining the way we approach mental and cognitive health for people around the world. 
-Our mission is simple yet powerful: to create products that improve cognitive well-being, whether it’s helping a student concentrate better, supporting professionals to manage stress, or providing solutions for individuals facing memory challenges due to age or illness. We are building a future where everyone—regardless of age, profession, or health condition—has access to tools that enhance their mental strength and clarity.
-As the CPO, my responsibility is to ensure that every product we develop is meaningful, effective, and user-friendly. We don’t just make products for one specific group; we create solutions that span generations, addressing the unique cognitive and emotional needs of students, parents, working professionals, seniors, and those managing chronic conditions. It’s about offering personalized support that fits seamlessly into daily life.
-Our scope also extends to medical emergency management, where quick access to reliable tools can save lives. Emergencies can happen at any time, and our technology helps people respond quickly and effectively, potentially saving lives. My responsibility is to ensure these solutions are always reliable and ready when they’re needed most.
-Leveraging AI in our products allows us to make cognitive and mental health support accessible to a global audience, tailoring solutions for every age group and profession while maintaining a high standard of innovation and care.AI enables us to create intuitive, adaptive products that evolve with the unique needs of individuals—whether it’s enhancing memory, managing cognitive health, or supporting users in critical medical emergencies. Our goal is to ensure every user feels supported, no matter their background or health challenges.
- Ensuring that these products are accessible, intuitive, and effective is a duty I take very seriously.
-As a Director and CPO, my focus is on blending technological innovation with a deep understanding of human needs. I am responsible for driving both our business goals and product vision, making sure that what we deliver not only meets the market’s demands but, more importantly, makes a tangible, positive impact on the lives of our users.
-Together, with our incredible team, we are shaping a future where mental and physical well-being are in everyone’s hands. 
-`,
+Our mission is simple yet powerful`
     },
     {
       designation: "CEO",
       name: "Mrs. Minal Bhuyekar",
       image: "",
       description: `As the CEO of MINDMED INNOVATIONS, I am proud to lead a company that is at the forefront of transforming how people approach mental and cognitive health. Our mission is to provide cutting-edge technology that helps individuals, regardless of age, profession, or health condition, strengthen their minds and improve their overall well-being.
-Whether it is students preparing for their academic challenges, parents balancing the demands of family and career, professionals managing stress, or seniors aiming to maintain cognitive function, we have developed solutions that cater to every stage of life. Our products are designed not just for specific groups but for everyone—because we believe mental health and cognitive vitality should be accessible to all.
-Beyond mental wellness, we also focus on medical emergency management. In critical moments, the right tools can make all the difference. Our products ensure that individuals and healthcare professionals have what they need to respond swiftly and effectively, empowering people to handle emergencies with confidence.
-AI is revolutionizing our ability to support mental and cognitive health globally, ensuring that our products not only improve memory and cognition but also provide life-saving assistance in medical emergencies, creating a safer and more capable world.
-As CEO, my responsibility is to ensure that we continue innovating and meeting the evolving needs of those who rely on us. We don’t just create technology; we create solutions that make lives better. 
-I am committed to driving our vision of a world where mental strength and emergency preparedness are at everyone’s fingertips, no matter where they are or what they face.
-At MINDMED INNOVATIONS, we are more than an IT company—we are a partner in your journey toward better mental health and safety. Together, we are building a future where sharper minds and safer lives are possible for all. 
+Whether lives are possible for all. 
 `,
     },
     {
@@ -101,11 +89,7 @@ At MINDMED INNOVATIONS, we are more than an IT company—we are a partner in you
       name: "Mr. Vikrant Walhekar",
       image: Vikrant,
       description: `As the Chief Operating Officer of MINDMED INNOVATIONS, my role is to ensure that our mission of improving mental and cognitive health for people across the globe is translated into action through seamless operations, innovative products, and exceptional service. At the heart of everything we do is a commitment to making a real difference in people’s lives.
-Our products are designed for everyone—from students seeking better focus, to parents balancing the demands of work and home, to professionals handling stress, to seniors managing memory challenges. We believe that mental health and cognitive strength are universal needs, and it’s our responsibility to provide tools that are accessible and effective for all, no matter their age, profession, or health condition.
-In addition to our cognitive health solutions, we also provide cutting-edge products for medical emergency management. These tools empower both individuals and healthcare professionals to respond quickly and confidently in critical situations, ensuring safety and security in moments that matter most.
-With AI at the core of our operations, we are able to efficiently scale our products to serve everyone, from students to professionals and people with chronic diseases, ensuring seamless access to cognitive health solutions and rapid emergency response systems."
-As COO, my focus is on making sure that our operations run smoothly, from product development to delivery, so that every solution we create meets the highest standards of reliability and impact. My responsibility is to bring efficiency and excellence to every aspect of our work, ensuring that our customers have the support they need to live healthier, safer, and more mentally resilient lives.
-At MINDMED INNOVATIONS, we are dedicated to not just building technology, but building trust. Every product we offer is a promise to our users that their mental well-being and safety are our priority. Together, we are creating a future where cognitive health and emergency preparedness are available to everyone, everywhere. Thank you for being part of this journey with us.
+
 `,
     },
   ],
