@@ -6,7 +6,7 @@ export const contactValidationSchema = Yup.object({
     .required("Name is required"),
 
   email: Yup.string()
-    .email("Invalid email format") // This automatically validates all valid emails
+    .email("Invalid email format")
     .required("Email is required"),
 
   phone: Yup.string()

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import InputField from "./InputField"; 
 import { contactValidationSchema } from "../../validations/contactFormValidations"; 
@@ -6,6 +6,8 @@ import Swal from 'sweetalert2';
 import { customerMsg } from "../../server/service";
 
 const ContactForm = () => {
+  const [isLoading, setIsLoading] = useState(false); // Loading state
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -16,18 +18,16 @@ const ContactForm = () => {
     validationSchema: contactValidationSchema,
     onSubmit: async (values, { resetForm }) => {
       try {
-        // Send form data to backend
+        setIsLoading(true); // Start loading
         const response = await customerMsg(values);
         console.log("Response:", response.data);
 
-        // Show success alert
         Swal.fire({
           title: "Form Submitted!",
           text: "We will reach you soon!",
           icon: "success",
         });
 
-        // Reset form fields after submission
         resetForm();
       } catch (error) {
         console.error("Error submitting form:", error);
@@ -45,6 +45,8 @@ const ContactForm = () => {
             icon: "error",
           });
         }
+      } finally {
+        setIsLoading(false); // Stop loading after response
       }
     },
   });
@@ -101,9 +103,12 @@ const ContactForm = () => {
       </div>
       <button
         type="submit"
-        className="w-full text-lg font-semibold hover:font-bold bg-orange-400 text-white p-2 rounded hover:bg-secondary"
+        disabled={isLoading} // Disable button while loading
+        className={`w-full text-lg font-semibold hover:font-bold bg-orange-400 text-white p-2 rounded hover:bg-secondary ${
+          isLoading ? "opacity-50 cursor-not-allowed" : ""
+        }`}
       >
-        Submit
+        {isLoading ? "Submitting..." : "Submit"}
       </button>
     </form>
   );
