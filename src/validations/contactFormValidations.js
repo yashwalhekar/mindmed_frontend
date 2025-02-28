@@ -6,10 +6,7 @@ export const contactValidationSchema = Yup.object({
     .required("Name is required"),
 
   email: Yup.string()
-    .matches(
-      /^[^@]+@gmail\.com$/,
-      "Invalid email format. Only Gmail addresses are allowed"
-    )
+    .email("Invalid email format") // This automatically validates all valid emails
     .required("Email is required"),
 
   phone: Yup.string()
