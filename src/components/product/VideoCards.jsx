@@ -82,8 +82,8 @@ const VideoCard = ({ videoId, title }) => {
           }}
         >
           <iframe
-            width="560"
-            height="315"
+             width={isMobile?"310":"560"}
+             height={isMobile?"210":"315"}
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
             title="YouTube video player"
             frameBorder="0"
