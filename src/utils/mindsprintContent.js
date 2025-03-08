@@ -109,3 +109,32 @@ export const prizeDetails = [
     ],
   },
 ]
+
+
+export const videos = [
+  {
+    videoId:"sPJ-Dd722uU",
+    title: "Introduction",
+    // description: "This is the first video in the list.",
+  },
+  {
+    videoId:"cR7TLa28H3k",
+    title: "Realization",
+    // description: "This is the first video in the list.",
+  },
+  {
+    videoId:"tkUaCM1wrCU",
+    title: "Finding the path",
+    // description: "This is the first video in the list.",
+  },
+  {
+    videoId:"Lh-vS1WAvno",
+    title: "Intellectual Spark",
+    // description: "This is the first video in the list.",
+  },
+  {
+    videoId:"Yw9S90Yiz0E",
+    title: "MindSprint!",
+    // description: "This is the first video in the list.",
+  },
+];

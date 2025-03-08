@@ -1,17 +1,28 @@
 // MindSprint.js
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
-import { Button, Typography } from "@mui/material";
+import {
+  Button,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import img from "../../assets/images/mindsprint.png";
 import CircularCard from "../../components/product/CircularCards";
 import InfoCard from "../../components/product/InfoCard";
 import { circleInfo } from "../../utils/mindsprintContent";
-import EnrollmentDialog from "../../components/product/EnrollmentDialog"; 
+import EnrollmentDialog from "../../components/product/EnrollmentDialog";
+import VideoCard from "../../components/product/VideoCards";
+
+import { videos } from "../../utils/mindsprintContent";
 
 function MindSprint() {
   const [selectedCircle, setSelectedCircle] = useState(circleInfo[0].title);
   const [openDialog, setOpenDialog] = useState(false);
   const [showPaymentDetails, setShowPaymentDetails] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   // Handle circle click
   const handleCircleClick = (title) => {
@@ -21,7 +32,7 @@ function MindSprint() {
   // Handle dialog open
   const handleOpenDialog = () => {
     setOpenDialog(true);
-    setShowPaymentDetails(false); 
+    setShowPaymentDetails(false);
   };
 
   // Handle dialog close
@@ -219,8 +230,7 @@ function MindSprint() {
         {/* Why Choose MindSprint for Your Institution? Section */}
         <Box
           sx={{
-            background:
-             "linear-gradient(135deg,rgb(53, 127, 255), #82b1ff )",
+            background: "linear-gradient(135deg,rgb(53, 127, 255), #82b1ff )",
             p: 3,
             mt: 5,
             borderTopRightRadius: "20px",
@@ -256,8 +266,11 @@ function MindSprint() {
             }}
           >
             <b>
-              <span style={{fontSize:"18px"}}>MindSprint is not just about individual success—</span>it’s about
-              empowering institutions with a future-ready education model.
+              <span style={{ fontSize: "18px" }}>
+                MindSprint is not just about individual success—
+              </span>
+              it’s about empowering institutions with a future-ready education
+              model.
             </b>
             <br />
             <br /> <b>Enhance Academic Reputation </b>
@@ -279,8 +292,7 @@ function MindSprint() {
         {/* Learning Features: Smarter, Safer Learning Section */}
         <Box
           sx={{
-            background:
-              "linear-gradient(135deg,rgb(53, 127, 255), #82b1ff )",
+            background: "linear-gradient(135deg,rgb(53, 127, 255), #82b1ff )",
             p: 3,
             mt: 5,
             borderTopRightRadius: "20px",
@@ -335,6 +347,46 @@ function MindSprint() {
             navigation for a seamless learning experience.
           </Typography>
         </Box>
+        <Box p={3}>
+          {isMobile ? (
+            <Box
+              sx={{
+                display: "flex",
+                overflowX: "auto",
+                gap: 2,
+                justifyContent: "space-between",
+                scrollbarWidth: "none",
+                "&::-webkit-scrollbar": { display: "none" },
+              }}
+            >
+              {videos.map((video, index) => (
+                <Box key={index} sx={{ flex: "0 0 auto", width: "80%" }}>
+                  <VideoCard
+                    videoId={video.videoId}
+                    title={video.title}
+                    description={video.description}
+                  />
+                </Box>
+              ))}
+            </Box>
+          ) : (
+            <Grid
+              container
+              spacing={2}
+              sx={{ justifyContent: "space-between" }}
+            >
+              {videos.map((video, index) => (
+                <Grid item key={index} xs={12} sm={6} md={2}>
+                  <VideoCard
+                    videoId={video.videoId}
+                    title={video.title}
+                    description={video.description}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          )}
+        </Box>
 
         {/* Enroll Now Button */}
         <Box sx={{ width: "100%", p: 3 }}>
@@ -344,7 +396,7 @@ function MindSprint() {
             fullWidth
             onClick={handleOpenDialog}
           >
-             Hurry Up - Limited Time offer!
+            Hurry Up - Limited Time offer!
           </Button>
         </Box>
 
