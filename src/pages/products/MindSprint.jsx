@@ -348,44 +348,35 @@ function MindSprint() {
           </Typography>
         </Box>
         <Box p={3}>
-          {isMobile ? (
-            <Box
-              sx={{
-                display: "flex",
-                overflowX: "auto",
-                gap: 2,
-                justifyContent: "space-between",
-                scrollbarWidth: "none",
-                "&::-webkit-scrollbar": { display: "none" },
-              }}
-            >
-              {videos.map((video, index) => (
-                <Box key={index} sx={{ flex: "0 0 auto", width: "80%" }}>
-                  <VideoCard
-                    videoId={video.videoId}
-                    title={video.title}
-                    description={video.description}
-                  />
-                </Box>
-              ))}
-            </Box>
-          ) : (
-            <Grid
-              container
-              spacing={2}
-              sx={{ justifyContent: "space-between" }}
-            >
-              {videos.map((video, index) => (
-                <Grid item key={index} xs={12} sm={6} md={2}>
-                  <VideoCard
-                    videoId={video.videoId}
-                    title={video.title}
-                    description={video.description}
-                  />
-                </Grid>
-              ))}
-            </Grid>
-          )}
+          <Box
+            sx={{
+              display: "flex",
+              overflowX: "auto",
+              gap: 2,
+              justifyContent: "flex-start",
+              scrollbarWidth: "none", // Hide scrollbar for Firefox
+              "&::-webkit-scrollbar": { display: "none" }, // Hide scrollbar for Chrome/Safari
+              "&::-webkit-scrollbar-thumb:hover": {
+                backgroundColor: "#555",
+              },
+            }}
+          >
+            {videos.map((video, index) => (
+              <Box
+                key={index}
+                sx={{
+                  flex: "0 0 auto",
+                  width: { xs: "80%", sm: "50%", md: "20%" },
+                }}
+              >
+                <VideoCard
+                  videoId={video.videoId}
+                  title={video.title}
+                  description={video.description}
+                />
+              </Box>
+            ))}
+          </Box>
         </Box>
 
         {/* Enroll Now Button */}

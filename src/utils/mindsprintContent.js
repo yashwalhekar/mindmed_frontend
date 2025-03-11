@@ -137,4 +137,8 @@ export const videos = [
     title: "MindSprint!",
     // description: "This is the first video in the list.",
   },
+  {
+    videoId:"wbj_xuSTWSU",
+    title: "Kabir's Journey",
+  }
 ];
